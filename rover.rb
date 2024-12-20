@@ -21,8 +21,10 @@ class Rover
   end
 
   def navigate
+    return if out_of_bounds?(@position[:x], @position[:y])
+
     move_rover
-    finish_position(@position)
+    finish_position
   end
 
   private
@@ -63,9 +65,7 @@ class Rover
     x_axis.negative? || y_axis.negative? || x_axis > @size[:x] || y_axis > @size[:y]
   end
 
-  def finish_position(positions)
-    [positions].map do |position|
-      "#{position[:x]} #{position[:y]} #{position[:cardinal_point]}"
-    end
+  def finish_position
+    "#{@position[:x]} #{@position[:y]} #{@position[:cardinal_point]}"
   end
 end
