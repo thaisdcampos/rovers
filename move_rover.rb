@@ -16,15 +16,13 @@ class MoveRover
     @size = size
   end
 
-  def self.execute(position:, route:, size:)
-    new(position: position, route: route, size: size).execute
+  def self.navigate(position:, route:, size:)
+    new(position: position, route: route, size: size).navigate
   end
 
-  def execute
-    return if invalid_position?
-
+  def navigate
     move_rover
-    @position
+    finish_position(@position)
   end
 
   private
@@ -35,7 +33,7 @@ class MoveRover
       when 'R', 'L'
         rotate(command)
       else
-        move_foward
+        move_forward
       end
     end
   end
