@@ -8,3 +8,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rspec'
 end
+
+group :test do
+  gem 'simplecov'
+end

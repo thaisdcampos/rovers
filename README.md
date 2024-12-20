@@ -1,17 +1,41 @@
 # rovers
 
-## O problema
-Um esquadrão de robôs rovers deve ser pousado pela NASA em um planalto em Marte. Este planalto, que é curiosamente retangular, deve ser navegado
-pelos rovers para que suas câmeras de bordo possam ter uma visão completa do terreno ao redor para enviar de volta à Terra.
-A posição e a localização de um rover são representadas por uma combinação de coordenadas x e y e uma letra representando um dos quatro pontos cardeais
-da bússola. O planalto é dividido em uma grade para simplificara navegação. Uma posição de exemplo pode ser 0, 0, N, o que significa que o
-rover está no canto inferior esquerdo e voltado para o Norte. Para controlar um rover, a NASA envia uma sequência simples de letras.
-As letras possíveis são 'L', 'R' e 'M'. 'L' e 'R' fazem o rover girar 90 graus para a esquerda ou direita, respectivamente, sem se mover
-de seu ponto atual. 'M' significa avançar um ponto da grade e mantero mesmo rumo.
-Suponha que o quadrado diretamente ao norte de (x, y) seja (x, y+1).
+## Problem
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular,
+must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to 
+send back to Earth.A rover's position and location is represented by a combination of x and y co-ordinates and a letter 
+representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. 
+An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North. In order to 
+control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the
+rover spin 90 degrees left or right respectively, without moving from its current spot. 'M' means move forward one grid 
+point, and maintain the same heading.
+Assume that the square directly North from (x, y) is (x, y+1). 
 
 ## Input
-O sistema espera um arquivo .txt, seu nome deve ser `input_rover.txt`, ele deve estar na pasta do projeto antes da execução.
+The system expects a .txt file, its name must be `input_rover.txt`, it must be in the project folder before execution.
 
 ## Output
-O sistema devolve as cordenadas onde o robô parou e qual direção ele está olhando..
+The system returns the coordinates where the robot stopped and which direction it is looking.
+
+## Requirements
+* Ruby 3.3.6
+
+## Running
+Replace the values in the `input_rover.txt` with the desired parameters.
+Then run the program using the following command:
+```sh 
+ruby rover.rb
+``
+
+## Tests
+Run the following command::
+```sh
+bundle exec rspec spec/
+```
+
+Se você precisar verificar a cobertura de testes:
+If you need check the tests coverage:
+```sh
+COVERAGE=true bundle exec rspec spec/
+```
+After that, open the file coverage/index.html
