@@ -4,10 +4,6 @@ require './rover'
 
 # class responsible for handling files
 class RoverNavigator
-  def initialize(file_path)
-    @file_path = file_path
-  end
-
   def navigate_rovers
     data = sanitize_input
     size = data[:size]
@@ -19,7 +15,7 @@ class RoverNavigator
   private
 
   def sanitize_input
-    file = File.open(@file_path)
+    file = File.open('input_rovers.txt')
     lines = file.readlines
     size = lines[0].split.map(&:to_i).then { |x, y| { x: x, y: y } }
 
@@ -40,3 +36,7 @@ class RoverNavigator
     { size: size, rovers: rovers }
   end
 end
+
+puts '---------------------------------'
+puts RoverNavigator.new.navigate_rovers
+puts '---------------------------------'

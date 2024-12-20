@@ -24,7 +24,7 @@ The system returns the coordinates where the robot stopped and which direction i
 Replace the values in the `input_rover.txt` with the desired parameters.
 Then run the program using the following command:
 ```sh 
-ruby rover.rb
+ruby rover_navigator.rb
 ``
 
 ## Tests

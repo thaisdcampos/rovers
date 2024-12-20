@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Responsable to move the robots
-class MoveRover
+class Rover
   DIRECTIONS = %w[N E S W].freeze
   MOVES = {
     'N' => { x: 0, y: 1 },
