@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../rover'
+require_relative '../app/rover'
 
 RSpec.describe Rover do
   subject(:rover) { described_class.navigate(position: position, route: route, size: size) }

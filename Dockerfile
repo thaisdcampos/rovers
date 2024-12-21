@@ -8,5 +8,5 @@ RUN bundle install
 
 COPY . .
 
-CMD ["ruby", "rover_navigator.rb"]
+CMD ["ruby", "app/rover_navigator.rb"]
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './rover'
+require_relative '../app/rover.rb'
 
 # class responsible for handling files
 class RoverNavigator

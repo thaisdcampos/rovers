@@ -32,7 +32,7 @@ docker compose build
 Running
 ```sh
 docker compose run rover
-``
+```
 
 ## Tests
 Run the following command::
