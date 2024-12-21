@@ -35,7 +35,7 @@ docker compose run rover
 ```
 
 ## Tests
-Run the following command::
+Run the following command:
 ```sh
 docker compose run rover rspec
 ```
