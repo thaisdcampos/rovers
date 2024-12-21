@@ -1,0 +1,9 @@
+services:
+  rover:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - ./coverage:/rover/coverage
+    stdin_open: true
+    tty: true
