@@ -43,7 +43,7 @@ class RoverNavigator
 end
 
 if __FILE__ == $PROGRAM_NAME
-  puts '---------------------------------'
+  # :nocov:
   puts RoverNavigator.new('input_rovers.txt').navigate_rovers
-  puts '---------------------------------'
+  # :nocov:
 end

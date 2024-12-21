@@ -10,10 +10,10 @@ RSpec.describe RoverNavigator do
   let(:navigator) { RoverNavigator.new(file_path) }
 
   describe '#navigate_rovers' do
-    let(:expect_move) { '5 1 E' }
+    let(:expected_move) { '5 1 E' }
 
     before do
-      allow(Rover).to receive(:navigate).and_return(expect_move)
+      allow(Rover).to receive(:navigate).and_return(expected_move)
     end
 
     it 'navigates rovers based on their routes' do

@@ -48,7 +48,7 @@ class Rover
   def move_forward
     move = MOVES[@position[:cardinal_point]]
 
-    return if invalid_destination?(move)
+    raise 'Invalid move: out of bounds!' if invalid_destination?(move)
 
     @position[:x] += move[:x]
     @position[:y] += move[:y]
