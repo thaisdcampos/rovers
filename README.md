@@ -18,24 +18,34 @@ The system expects a .txt file, its name must be `input_rover.txt`, it must be i
 The system returns the coordinates where the robot stopped and which direction it is looking.
 
 ## Requirements
-* Ruby 3.3.6
+* Docker
 
 ## Running
 Replace the values in the `input_rover.txt` with the desired parameters.
-Then run the program using the following command:
+Then run the program using the following commands:
+
+Build container
 ```sh 
-ruby rover_navigator.rb
+docker compose build
+```
+
+Running
+```sh
+docker compose run rover
 ``
 
 ## Tests
 Run the following command::
 ```sh
-bundle exec rspec spec/
+docker compose run rover rspec
 ```
 
-Se você precisar verificar a cobertura de testes:
 If you need check the tests coverage:
 ```sh
-COVERAGE=true bundle exec rspec spec/
+docker compose run rover bash -c "rm -rf coverage && rspec"
 ```
+
 After that, open the file coverage/index.html
+```sh
+open coverage/index.html
+```
