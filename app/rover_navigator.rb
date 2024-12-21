@@ -2,7 +2,7 @@
 
 require_relative '../app/rover.rb'
 
-# class responsible for handling files
+# class responsible for processing the coordinates
 class RoverNavigator
   def initialize(file_path)
     @file_path = file_path
